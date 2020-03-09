@@ -1,10 +1,10 @@
 ﻿const express = require('express');
 const router = express.Router();
-const userService = require('./user.service');
+const userService = require('./transaction.service');
 
 // routes
-router.post('/authenticate', authenticate);
-router.post('/register', register);
+router.post('/get', authenticate);
+router.post('/post', register);
 router.get('/', getAll);
 router.get('/current', getCurrent);
 router.get('/:id', getById);

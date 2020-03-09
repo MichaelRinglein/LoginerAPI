@@ -1,4 +1,4 @@
 ﻿{
-    "connectionString": "mongodb+srv://alex:alex764251@cluster0-fhiof.gcp.mongodb.net/test",
-    "secret": "alex764251"
+    "connectionString": "mongodb://localhost/node-mongo-registration-login-api",
+    "secret": "123456"
 }
