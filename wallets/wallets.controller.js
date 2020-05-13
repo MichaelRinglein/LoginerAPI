@@ -3,7 +3,6 @@ const router = express.Router();
 const walletService = require('./wallet.service');
 
 // routes
-router.post('/get', authenticate);
 router.post('/post', register);
 router.get('/', getAll);
 router.get('/current', getCurrent);
@@ -14,11 +13,6 @@ router.delete('/:id', _delete);
 module.exports = router;
 
 
-function authenticate(req, res, next) {
-    walletService.authenticate(req.body)
-        .then(user => user ? res.json(user) : res.status(400).json({ message: 'Username or password is incorrect' }))
-        .catch(err => next(err));
-}
 
 function register(req, res, next) {
     walletService.create(req.body)

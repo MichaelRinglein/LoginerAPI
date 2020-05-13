@@ -18,7 +18,7 @@ app.use('/users', require('./users/users.controller'));
 app.use('/countries', require('./countries/countries.controller'));
 app.use('/auctions', require('./auctions/auctions.controller'));
 app.use('/transactions', require('./transactions/transactions.controller'));
-app.use('/wallets', require('./wallet/wallets.controller'));
+app.use('/wallets', require('./wallets/wallets.controller'));
 
 // global error handler
 app.use(errorHandler);

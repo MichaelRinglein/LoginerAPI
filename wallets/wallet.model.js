@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 const schema = new Schema({
-    username: { type: String, unique: false, required: false },
+    userId: { type: String, unique: false, required: false },
     BTC: { type: String, unique: false, required: false },
     LTH: { type: String, unique: false, required: false },
     ETH: { type: String, unique: false, required: false },
@@ -12,4 +12,4 @@ const schema = new Schema({
 
 schema.set('toJSON', { virtuals: true });
 
-module.exports = mongoose.model('Transaction', schema);
+module.exports = mongoose.model('Wallet', schema);

@@ -15,7 +15,6 @@ function jwt() {
             '/countries',
             '/auctions',
             '/transactions'
-
         ]
     });
 }
@@ -29,4 +28,4 @@ async function isRevoked(req, payload, done) {
     }
 
     done();
-};
+}
