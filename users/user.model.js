@@ -5,9 +5,7 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
     username: { type: String, unique: true, required: true },
     email: { type: String, unique: true, required: true },
-    country: { type: String, unique: false, required: false },
-    city: { type: String, unique: false, required: false },
-    address: { type: String, unique: false, required: false },
+    googleId: { type: String, unique: true, required: true },
     hash: { type: String, required: false },
     createdDate: { type: Date, default: Date.now },
     status: { type: String, required: false },
