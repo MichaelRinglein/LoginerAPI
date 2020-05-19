@@ -7,6 +7,7 @@ const schema = new Schema({
     email: { type: String, unique: true, required: true },
     googleId: { type: String, unique: true, required: true },
     partner: { type: String, unique: false, required: false },
+    bonus: { type: String, unique: false, required: false },
     restaurantName: { type: String, unique: false, required: true },
     restaurantAddress: { type: String, unique: false, required: true },
     restaurantAvatar: { type: String, unique: false, required: true },
