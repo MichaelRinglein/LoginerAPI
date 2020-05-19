@@ -12,9 +12,9 @@ function jwt() {
             '/users/authenticate',
             '/users/register',
             '/users',
-            '/countries',
-            '/auctions',
-            '/transactions'
+            '/admin/authenticate',
+            '/admin/register',
+            '/admin'
         ]
     });
 }

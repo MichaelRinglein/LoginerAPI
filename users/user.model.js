@@ -9,6 +9,8 @@ const schema = new Schema({
     restaurantName: { type: String, unique: false, required: true },
     restaurantAddress: { type: String, unique: false, required: true },
     restaurantAvatar: { type: String, unique: false, required: true },
+    modal: { type: Boolean, unique: false, required: false, value: false },
+    admin: { type: Boolean, unique: false, required: false, value: false },
     hash: { type: String, required: false },
     createdDate: { type: Date, default: Date.now },
     avatar   : { type: mongoose.Schema.Types.Mixed, required: false }
