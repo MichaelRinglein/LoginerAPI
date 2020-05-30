@@ -12,6 +12,7 @@ function jwt() {
             '/users/authenticate',
             '/users/register',
             '/users',
+            '/users/:userId',
             '/admin/authenticate',
             '/admin/register',
             '/admin'
