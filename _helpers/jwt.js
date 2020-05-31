@@ -12,7 +12,8 @@ function jwt() {
             '/users/authenticate',
             '/users/register',
             '/users/',
-            /^\/users\/get\/.*/
+            /^\/users\/get\/.*/,
+            /^\/users\/put\/.*/
         ]
     });
 }

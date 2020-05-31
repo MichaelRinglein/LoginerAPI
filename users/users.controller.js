@@ -8,7 +8,7 @@ router.post('/register', register);
 router.get('/', getAll);
 router.get('/current', getCurrent);
 router.get('/get/:id', getById);
-router.put('/:id', update);
+router.put('/put/:id', update);
 router.delete('/:id', _delete);
 
 module.exports = router;
