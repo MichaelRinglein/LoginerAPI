@@ -8,6 +8,7 @@ function jwt() {
     const secret = config.secret;
     return expressJwt({ secret }).unless({
         path: [
+            { url: /^\/users\/.*/, methods: ['GET', 'PUT'] },
             // public routes that don't require authentication
             '/users/:id',
             '/users/authenticate',
@@ -20,13 +21,13 @@ function jwt() {
     });
 }
 
-// async function isRevoked(req, payload, done) {
-//     const user = await userService.getById(payload.sub);
-//
-//     // revoke token if user no longer exists
-//     if (!user) {
-//         return done(null, true);
-//     }
-//
-//     done();
-// }
+async function isRevoked(req, payload, done) {
+    const user = await userService.getById(payload.sub);
+
+    // revoke token if user no longer exists
+    if (!user) {
+        return done(null, true);
+    }
+
+    done();
+}
