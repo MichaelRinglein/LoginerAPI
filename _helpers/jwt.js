@@ -8,14 +8,11 @@ function jwt() {
     const secret = config.secret;
     return expressJwt({ secret, isRevoked }).unless({
         path: [
-            { url: /^\/users\/.*/, methods: ['GET', 'PUT'] },
             // public routes that don't require authentication
             '/users/authenticate',
             '/users/register',
-            '/users',
-            '/admin/authenticate',
-            '/admin/register',
-            '/admin'
+            '/users/',
+            /^\/users\/get\/.*/
         ]
     });
 }
